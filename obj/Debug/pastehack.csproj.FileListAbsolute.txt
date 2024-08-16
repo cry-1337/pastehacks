@@ -1,0 +1,14 @@
+C:\Users\lame8\Desktop\pastehack\pastehack\obj\Debug\pastehack.csproj.AssemblyReference.cache
+C:\Users\lame8\Desktop\pastehack\pastehack\obj\Debug\pastehack.csproj.CoreCompileInputs.cache
+C:\Users\lame8\Desktop\pastehack\pastehack\obj\Debug\pastehack.csproj.Up2Date
+C:\Users\lame8\Desktop\pastehack\pastehack\obj\Debug\pastehack.dll
+C:\Users\lame8\Desktop\pastehack\pastehack\obj\Debug\pastehack.pdb
+C:\Users\lame8\Desktop\pastehack\pastehack.dll
+C:\Users\lame8\Desktop\pastehack\pastehack.pdb
+C:\Program Files (x86)\Steam\steamapps\common\Unturned\Unturned_Data\Managed\pastehack.dll
+C:\Program Files (x86)\Steam\steamapps\common\Unturned\Unturned_Data\Managed\pastehack.pdb
+C:\Users\lame8\Desktop\pastehack\pastehacks\obj\Debug\pastehack.csproj.AssemblyReference.cache
+C:\Users\lame8\Desktop\pastehack\pastehacks\obj\Debug\pastehack.csproj.CoreCompileInputs.cache
+C:\Users\lame8\Desktop\pastehack\pastehacks\obj\Debug\pastehack.csproj.Up2Date
+C:\Users\lame8\Desktop\pastehack\pastehacks\obj\Debug\pastehack.dll
+C:\Users\lame8\Desktop\pastehack\pastehacks\obj\Debug\pastehack.pdb
