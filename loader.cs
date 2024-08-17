@@ -3,6 +3,12 @@ using System;
 using System.Reflection;
 using UnityEngine;
 
+public static class global
+{
+    public static bool spy;
+    public static bool toggle_test1;
+}
+
 namespace pastehack
 {
     [AttributeUsage(AttributeTargets.Class)]
@@ -22,6 +28,7 @@ namespace pastehack
         public static void load()
         {
             obj = new GameObject("aboba");
+            GameObject.DontDestroyOnLoad(obj);
 
             add_components();
 

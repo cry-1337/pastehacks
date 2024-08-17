@@ -35,6 +35,11 @@
     <Compile Include="esp\esp_main.cs" />
     <Compile Include="loader.cs" />
     <Compile Include="menu\menu_main.cs" />
+    <Compile Include="menu\windows\main\main_window.cs" />
+    <Compile Include="menu\windows\main\tabs\aimbot.cs" />
+    <Compile Include="menu\windows\main\tabs\visuals.cs" />
+    <Compile Include="menu\windows\tab.cs" />
+    <Compile Include="menu\windows\window.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -145,9 +150,6 @@
     <Reference Include="UnityEngine.AIModule">
       <HintPath>..\libs\UnityEngine.AIModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>..\libs\UnityEngine.Analytics.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.AndroidJNIModule">
       <HintPath>..\libs\UnityEngine.AndroidJNIModule.dll</HintPath>
     </Reference>
@@ -183,9 +185,6 @@
     </Reference>
     <Reference Include="UnityEngine.DSPGraphModule">
       <HintPath>..\libs\UnityEngine.DSPGraphModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.FileSystemModule">
-      <HintPath>..\libs\UnityEngine.FileSystemModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GameCenterModule">
       <HintPath>..\libs\UnityEngine.GameCenterModule.dll</HintPath>
