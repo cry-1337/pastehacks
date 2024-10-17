@@ -14,3 +14,6 @@ values:
 pastehack also have libraries like:
 * harmony by [pardeike](https://github.com/pardeike).
 * unturned libraries.
+
+# our social networks
+Discord: https://discord.gg/pHfnJZezGX
