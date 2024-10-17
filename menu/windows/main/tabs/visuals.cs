@@ -10,7 +10,7 @@ namespace pastehack.menu.windows.main.tabs
         public override void draw(int tab_id)
         {
             rect = GUI.Window(tab_id, rect, (int id) => {
-                global.toggle_test1 = GUILayout.Toggle(global.toggle_test1, "test toggle");
+                menu_helper.toggle("esp", ref global.c.esp);
 
                 GUI.DragWindow();
             }, name);

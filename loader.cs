@@ -5,8 +5,8 @@ using UnityEngine;
 
 public static class global
 {
+    public static config c = new config();
     public static bool spy;
-    public static bool toggle_test1;
 }
 
 namespace pastehack

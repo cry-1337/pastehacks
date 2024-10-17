@@ -15,7 +15,7 @@ namespace pastehack.menu.windows.main
                                    where t.BaseType == typeof(tab)
                                    && t.GetConstructor(Type.EmptyTypes) != null
                                    select Activator.CreateInstance(t) as tab;
-
+            
             foreach (var item in assembly_tabs)
                 tabs.Add(item);
         }

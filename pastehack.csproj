@@ -31,9 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="configs\config.cs" />
     <Compile Include="esp\esp_helper.cs" />
     <Compile Include="esp\esp_main.cs" />
+    <Compile Include="extensions\vector2.cs" />
     <Compile Include="loader.cs" />
+    <Compile Include="menu\menu_helper.cs" />
     <Compile Include="menu\menu_main.cs" />
     <Compile Include="menu\windows\main\main_window.cs" />
     <Compile Include="menu\windows\main\tabs\aimbot.cs" />
