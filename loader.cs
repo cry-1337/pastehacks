@@ -1,38 +1,23 @@
-﻿using SDG.Unturned;
-using System;
-using System.Reflection;
+﻿using pastehack.esp;
+using pastehack.menu;
+using SDG.Unturned;
 using UnityEngine;
-
-public static class global
-{
-    public static config c = new config();
-    public static bool spy;
-}
 
 namespace pastehack
 {
-    [AttributeUsage(AttributeTargets.Class)]
-    public class pastehack : Attribute { }
-
-    public static class loader
+	public static class loader
     {
-        static GameObject obj;
-
-        static void add_components()
-        {
-            foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
-                if (type.IsDefined(typeof(pastehack)))
-                    obj.AddComponent(type);
-        }
+        private static GameObject? game_object;
 
         public static void load()
         {
-            obj = new GameObject("aboba");
-            GameObject.DontDestroyOnLoad(obj);
+            game_object = new GameObject("aboba");
+            Object.DontDestroyOnLoad(game_object);
 
-            add_components();
+			game_object.AddComponent<menu_main>();
+            game_object.AddComponent<players_esp>();
 
-            UnturnedLog.info("[+] paste injected");
+			UnturnedLog.info("[+] paste injected");
         }
     }
 }

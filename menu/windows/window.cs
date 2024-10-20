@@ -2,13 +2,26 @@
 
 namespace pastehack.menu.windows
 {
-    public abstract class window
-    {
-        public abstract Rect rect { get; set; }
-        public abstract int id { get; set; }
-        public abstract string title { get; set; }
-        public abstract bool menu_state { get; set; }
+    public abstract class window(Rect rect, int id, string title, bool menu_state = true)
+	{
+		public Rect rect { get; set; } = rect;
 
-        public abstract void main();
+		public int id { get; set; } = id;
+
+		public string title { get; set; } = title;
+
+		public bool menu_state { get; set; } = menu_state;
+
+		public void main()
+		{
+			rect = GUI.Window(id, rect, window_function, title);
+		}
+
+		protected abstract void content();
+
+		private void window_function(int id)
+		{
+			content();
+		}
     }
 }

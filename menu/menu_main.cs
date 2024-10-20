@@ -1,31 +1,36 @@
 ﻿using pastehack.menu.windows;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Linq;
-using UnityEngine;
-using System;
+using pastehack.menu.windows.main;
+using pastehack.menu.windows.main.tabs;
 using SDG.Unturned;
+using UnityEngine;
 
 namespace pastehack.menu
 {
-    [pastehack]
     internal class menu_main : MonoBehaviour
     {
         public static bool global_state = true;
-        public static List<window> windows = new List<window>();
+        public static window[] windows = [];
 
-        void Awake()
+		private void Awake()
         {
-            var assembly_windows = from t in Assembly.GetExecutingAssembly().GetTypes()
-                                   where t.BaseType == typeof(window)
-                                   && t.GetConstructor(Type.EmptyTypes) != null
-                                   select Activator.CreateInstance(t) as window;
+			visuals visuals = new(new(0, 0, 200, 300), 3453, false);
+			aimbot aimbot = new(new(0, 0, 200, 300), 3455, false);
 
-            foreach (var item in assembly_windows)
-                windows.Add(item);
-        }
+			main_window main = new(
+			[
+				visuals,
+				aimbot
+			]);
 
-        void Update()
+			windows =
+			[
+				main,
+				visuals,
+				aimbot
+			];
+		}
+
+		private void Update()
         {
             if (Input.GetKeyDown(KeyCode.F1))
             {
@@ -36,18 +41,16 @@ namespace pastehack.menu
             }
         }
 
-        void OnGUI()
+		private void OnGUI()
         {
-            if (global.spy)
-                return;
-
-            foreach (var window in windows)
+            if (!global.is_spying && global_state)
             {
-                if (window.menu_state & global_state)
-                    window.main();
-                else if (!window.menu_state)
-                    window.main();
-            }
+				foreach (var window in windows)
+				{
+					if (window.menu_state)
+						window.main();
+				}
+			} 
         }
     }
 }
